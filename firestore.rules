@@ -1,0 +1,104 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper Functions
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    function isCollaborator(episodeId) {
+      return request.auth.uid in get(/databases/$(database)/documents/episodes/$(episodeId)).data.collaborators;
+    }
+    function isTeamMember(teamId) {
+      return request.auth.uid in get(/databases/$(database)/documents/teams/$(teamId)).data.members.uid;
+    }
+
+    // USER DATA: Users can only manage their own documents.
+    match /users/{userId} {
+      allow read, create, update: if isOwner(userId);
+    }
+    match /userPreferences/{userId} {
+      allow read, create, update: if isOwner(userId);
+    }
+    match /usersettings/{userId} {
+      allow read, create, update: if isOwner(userId);
+    }
+
+    // USER CONTENT: Data created by and for a specific user.
+    match /userCustomThemes/{themeId} {
+      allow read, create, update, delete: if isOwner(resource.data.userId);
+    }
+    match /episodeLayouts/{layoutId} {
+      allow read, create, update, delete: if isOwner(resource.data.userId);
+    }
+    match /userWorkspaces/{workspaceId} {
+      allow read, create, update, delete: if isOwner(resource.data.userId);
+    }
+    match /tasks/{taskId} {
+      allow read, create, update, delete: if isOwner(resource.data.userId);
+    }
+
+    // EPISODES & VERSIONS: Main content with collaborator access.
+    match /episodes/{episodeId} {
+      // ANY authenticated user can read episode data. This is necessary for dashboard loading and collaboration features.
+      allow read: if request.auth != null;
+
+      // CREATE: Only authenticated users can create episodes.
+      allow create: if request.auth != null;
+      
+      // UPDATE: Only collaborators can update.
+      allow update: if isCollaborator(episodeId);
+
+      // DELETE: A user can delete an episode if they created it.
+      allow delete: if isOwner(get(/databases/$(database)/documents/episodes/$(episodeId)).data.createdBy);
+      
+      // BATCH DELETE for MOCK DATA: Allow deleting a LIST of episodes if the query is for mock episodes created by the user.
+      // This rule is specifically for the "Clear Samples" button.
+      allow delete: if request.query.resource.data.isMock == true && request.query.resource.data.createdBy == request.auth.uid;
+    }
+
+    match /episodeVersions/{versionId} {
+      // READ: Users can only read versions that belong to them.
+      allow read: if isOwner(resource.data.userId);
+
+      // CREATE: A user can create a version if they are a collaborator on the original episode.
+      allow create: if isCollaborator(request.resource.data.episodeId);
+      
+      // DELETE: Users can delete versions they own.
+      allow delete: if isOwner(get(/databases/$(database)/documents/episodeVersions/$(versionId)).data.userId);
+    }
+
+    // SOCIAL & COLLABORATION FEATURES
+    match /shares/{shareId} {
+      allow read: if request.auth.uid == resource.data.toUserId || request.auth.uid == resource.data.fromUserId;
+      allow create: if isOwner(request.resource.data.fromUserId);
+      allow update: if isOwner(resource.data.toUserId); // Only recipient can accept/reject
+    }
+
+    match /teams/{teamId} {
+      allow read: if isTeamMember(teamId);
+      allow create: if isOwner(request.resource.data.ownerId);
+      allow update, delete: if isOwner(resource.data.ownerId);
+    }
+    
+    // PUBLIC & SHARED DATA (adjust rules as needed for public features)
+    match /sharedSeasons/{shareId} {
+      // Anyone with the link can read, but only for a limited time (e.g., 7 days)
+      // For simplicity in this context, we allow any authenticated read.
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+    }
+
+    match /publicActivities/{activityId} {
+      // Logged-in users can read activities, and only create their own.
+      allow read: if request.auth != null;
+      allow create: if isOwner(request.resource.data.userId);
+    }
+
+    match /plannerPals/{palId} {
+      allow read, update, delete: if request.auth.uid in resource.data.userIds;
+      allow create: if request.auth.uid == request.resource.data.requestedBy;
+    }
+  }
+}

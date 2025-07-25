@@ -1,0 +1,18 @@
+
+runConfig:
+  cpu: 1
+  memoryMiB: 512
+  maxInstances: 2
+  minInstances: 0
+  concurrency: 80
+env:
+  - variable: DEPLOY_TRIGGER_VAR
+    value: "FORCE_REDEPLOY_CLEAN_BUILD_FINAL_20250706_05"
+  - variable: NEXT_PUBLIC_FIREBASE_CONFIG
+    value: "{\"apiKey\":\"AIzaSyAueqAq-2Zj4EU7MgmQP3-4V43d2DG_SKw\",\"authDomain\":\"plotform-ai-planner.firebaseapp.com\",\"projectId\":\"plotform-ai-planner\",\"storageBucket\":\"plotform-ai-planner.firebasestorage.app\",\"messagingSenderId\":\"305507057537\",\"appId\":\"1:305507057537:web:d0a815742131d8a4b1b280\"}"
+    availability: ["BUILD", "RUNTIME"]
+  - variable: NEXT_PUBLIC_GEMINI_API_KEY
+    value: "AIzaSyC80FLnB2sA0QyJBal0WHoq8hMMW9IOPYA"
+    availability: ["BUILD", "RUNTIME"]
+framework: nextjs
+runtime: nodejs20

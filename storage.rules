@@ -1,0 +1,20 @@
+
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Default rule: Allow reads and writes only if the user is authenticated.
+    // This is a good starting point. You can add more specific rules below.
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+
+    // Example of more granular rules (you can uncomment and modify these later):
+    /*
+    // Allow users to read and write their own files in a 'user' directory
+    match /users/{userId}/{allPaths=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    */
+  }
+}

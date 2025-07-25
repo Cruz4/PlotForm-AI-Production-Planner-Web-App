@@ -1,0 +1,68 @@
+
+{
+  "title": "Master PodPlan in 5 Minutes: From Idea to Full Podcast Plan",
+  "series": "PodPlan Tutorials",
+  "videoId": "PODPLAN_TUTORIAL_V1",
+  "description": "Welcome to the official PodPlan tutorial! In this video, we'll show you how to go from a single sentence idea to a complete, structured, and production-ready podcast plan in under 5 minutes. Learn how to use the dashboard, AI Plan Generator, inline editing, and the powerful full editor to streamline your content creation workflow.\n\nChapters:\n0:00 - Introduction to PodPlan\n0:35 - The Dashboard Overview\n1:10 - Using the AI Plan Generator\n2:15 - Navigating Seasons and Episode Cards\n2:45 - Inline Editing for Quick Changes\n3:30 - The Full Episode Editor\n4:15 - Collaboration & Sharing\n4:45 - Settings & Customization",
+  "tags": ["PodPlan", "Podcast Planner", "Content Creation", "AI Writing Tool", "SaaS Tutorial", "Productivity"],
+  "segments": [
+    {
+      "title": "Intro & Hook",
+      "duration_seconds": 35,
+      "script": "Hey creators! Are you tired of juggling scattered notes, messy Google Docs, and endless back-and-forth with your co-hosts? In the next five minutes, I’m going to show you how to use PodPlan to turn a single idea into a fully structured, multi-episode podcast plan, ready for production. Let’s get started!",
+      "visuals": "Upbeat music. Screen recording of a messy folder of documents, then a quick cut to the clean PodPlan dashboard. Title card: 'Master PodPlan in 5 Minutes'.",
+      "b_roll": ["Quick cuts of different creators looking frustrated", "Logo animation for PodPlan"]
+    },
+    {
+      "title": "The Dashboard: Your Command Center",
+      "duration_seconds": 35,
+      "script": "This is your dashboard, the heart of PodPlan. You can switch between a detailed List View, a workflow Board View, and a Timeline. Up top, you’ll find the AI Plan Generator, which is where the magic begins.",
+      "visuals": "Screen recording showing the dashboard. Mouse cursor clicks between List, Board, and Timeline tabs. Cursor circles the AI Plan Generator card.",
+      "b_roll": []
+    },
+    {
+      "title": "Using the AI Plan Generator",
+      "duration_seconds": 65,
+      "script": "Let's say we have an idea: 'a 4-episode podcast series about the history of classic video games'. We just type that into the generator and click 'Generate Plan'. The AI will now create a high-level plan, generate the content for each episode, and even create a specific production checklist for each one. Once it's done, we can add the entire plan to our dashboard with one click. And just like that, we have four fully planned episodes ready to go.",
+      "visuals": "Screen recording of typing the idea into the AI generator. Show the progress bar and status text. When the plan appears, quickly scroll through the generated episodes. Click 'Add Plan to Workspace'. The dashboard now shows the new season and episodes.",
+      "b_roll": ["Iconography for 'planning', 'generating', 'adding'"]
+    },
+    {
+      "title": "Navigating Episode Cards",
+      "duration_seconds": 30,
+      "script": "Your episodes are automatically organized into seasons. Each card shows the status, progress, and key dates. You can favorite an episode, or use the menu to share, export, or archive it.",
+      "visuals": "Cursor hovers over the season accordion, then an episode card. It highlights the status badge, progress bar, and the action buttons (star, ellipsis menu).",
+      "b_roll": []
+    },
+    {
+      "title": "Inline Editing for Quick Changes",
+      "duration_seconds": 45,
+      "script": "Need to make a quick tweak? No need to open a new page. Just expand any card. Here you can edit notes, add new segments, set dates, and manage your production checklist, all right from the dashboard. Your changes are saved automatically.",
+      "visuals": "Cursor clicks the expand icon on a card. The card expands. Show editing a segment's notes directly in the textarea. Click a date picker and select a new date. Check off a checklist item.",
+      "b_roll": []
+    },
+    {
+      "title": "The Full Episode Editor",
+      "duration_seconds": 45,
+      "script": "For more detailed work, click 'Edit Full Episode'. This gives you a dedicated view with a navigation panel for all your segments. Here, you can also access advanced features like Version History and the AI Content Polish tool to help you refine your script.",
+      "visuals": "Click 'Edit Full Episode' button. The page transitions to the full editor. Show the left-hand navigation panel. Briefly open the 'Version History' and 'AI Content Polish' dialogs.",
+      "b_roll": []
+    },
+    {
+      "title": "Collaboration & Sharing",
+      "duration_seconds": 30,
+      "script": "To work with a co-host, just go to the Share menu and select 'Share with Collaborator'. This copies a unique link. When your co-host opens it, your plan is imported into their workspace, keeping everything perfectly in sync.",
+      "visuals": "From the editor or dashboard card, open the share menu and click 'Share with Collaborator'. Show the confirmation toast. Animate a link icon moving from one computer screen to another.",
+      "b_roll": []
+    },
+    {
+      "title": "Outro & Call to Action",
+      "duration_seconds": 30,
+      "script": "And that’s it! You’ve just seen how to go from idea to a complete plan in minutes. Stop planning and start creating. Sign up for your free trial of PodPlan today. Thanks for watching!",
+      "visuals": "Quick montage of the key features shown in the video. End screen with the PodPlan logo, a 'Start Your Free Trial' button, and the website URL.",
+      "b_roll": ["Creators looking happy and productive"]
+    }
+  ]
+}
+
+    

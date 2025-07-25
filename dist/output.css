@@ -1,0 +1,852 @@
+@font-face {
+  font-family: 'MotleyForces';
+
+  src: url('/fonts/MotleyForces-Regular.ttf') format('truetype');
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Royando';
+
+  src: url('/fonts/Royando-Regular.ttf') format('truetype');
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-geist-mono), monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+          appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+          appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+          appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+embed,
+object {
+  display: block;
+  /* 1 */
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+:where(:root) {
+  /* Default Theme (NYN Theme) - Light Mode FALLBACKS / DEFAULTS */
+  --radius: 0.5rem;
+  --background: 0 0% 100%;
+  --foreground: 10 0% 13%;
+  --card: 0 0% 100%;
+  --card-foreground: 10 0% 13%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 10 0% 13%;
+  --primary: 271 76% 53%;
+  --primary-foreground: 0 0% 100%;
+  /* Purple from NYN_PRIMARY_HEX */
+  --secondary: 225 73% 57%;
+  --secondary-foreground: 0 0% 100%;
+  /* Blue from NYN_SECONDARY_HEX */
+  --muted: 0 0% 95%;
+  --muted-foreground: 0 0% 40%;
+  --accent: 51 100% 50%;
+  --accent-foreground: 0 0% 0%;
+  /* Gold from NYN_ACCENT_HEX */
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 271 76% 53%;
+  --chart-1: 271 76% 53%;
+  --chart-2: 225 73% 57%;
+  --chart-3: 51 100% 50%;
+  --chart-4: 286 60% 67%;
+  --chart-5: 200 100% 85%;
+  --sidebar-background: 0 0% 95%;
+  --sidebar-foreground: 10 0% 13%;
+  --sidebar-primary: 271 76% 53%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 51 100% 50%;
+  --sidebar-accent-foreground: 0 0% 0%;
+  --sidebar-border: 0 0% 90%;
+  --sidebar-ring: 271 76% 53%;
+  /* Dashboard card specific text colors - Default/NYN Theme Light */
+  --dashboard-card-episode-title-color: var(--accent);
+  /* Gold */
+  --dashboard-card-segment-title-color: var(--primary);
+  /* Purple - for "Host 1 segment progress" label */
+  --dashboard-card-last-updated-text-color: var(--muted-foreground);
+  --dashboard-card-progress-text-color: var(--accent);
+  /* Purple - for the % text on progress bar */
+}
+
+:where(.dark:root) {
+  /* Default Theme (NYN Theme) - Dark Mode FALLBACKS / DEFAULTS */
+  --background: 10 0% 13%;
+  --foreground: 0 0% 95%;
+  --card: 10 0% 16%;
+  --card-foreground: 0 0% 95%;
+  --popover: 10 0% 16%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 271 76% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 225 73% 57%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 10 0% 22%;
+  --muted-foreground: 0 0% 62%;
+  --accent: 51 100% 50%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 0% 95%;
+  --border: 10 0% 22%;
+  --input: 10 0% 22%;
+  --ring: 271 76% 53%;
+  --chart-1: 271 76% 53%;
+  --chart-2: 225 73% 57%;
+  --chart-3: 51 100% 50%;
+  --chart-4: 286 60% 67%;
+  --chart-5: 200 100% 85%;
+  --sidebar-background: 10 0% 16%;
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-primary: 271 76% 53%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 51 100% 50%;
+  --sidebar-accent-foreground: 0 0% 0%;
+  --sidebar-border: 10 0% 22%;
+  --sidebar-ring: 271 76% 53%;
+  /* Dashboard card specific text colors - Default/NYN Theme Dark */
+  --dashboard-card-episode-title-color: var(--accent);
+  /* Gold */
+  --dashboard-card-segment-title-color: var(--primary);
+  /* Purple - for "Host 1 segment progress" label */
+  --dashboard-card-last-updated-text-color: var(--muted-foreground);
+  --dashboard-card-progress-text-color: var(--accent);
+  /* White text on purple bar */
+}
+
+/* --- NYN Theme (Explicit) --- */
+
+html.light.theme-nyn-theme, html.theme-nyn-theme:not(.dark) {
+  --background: 0 0% 100%;
+  --foreground: 10 0% 13%;
+  --card: 0 0% 100%;
+  --card-foreground: 10 0% 13%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 10 0% 13%;
+  --primary: 271 76% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 225 73% 57%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 95%;
+  --muted-foreground: 0 0% 40%;
+  --accent: 51 100% 50%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 271 76% 53%;
+  --chart-1: 271 76% 53%;
+  --chart-2: 225 73% 57%;
+  --chart-3: 51 100% 50%;
+  --chart-4: 286 60% 67%;
+  --chart-5: 200 100% 85%;
+  --sidebar-background: 0 0% 95%;
+  --sidebar-foreground: 10 0% 13%;
+  --sidebar-primary: 271 76% 53%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 51 100% 50%;
+  --sidebar-accent-foreground: 0 0% 0%;
+  --sidebar-border: 0 0% 90%;
+  --sidebar-ring: 271 76% 53%;
+  --dashboard-card-episode-title-color: var(--accent);
+  --dashboard-card-segment-title-color: var(--primary);
+  --dashboard-card-last-updated-text-color: var(--muted-foreground);
+  --dashboard-card-progress-text-color: var(--primary);
+}
+
+html.dark.theme-nyn-theme {
+  --background: 10 0% 13%;
+  --foreground: 0 0% 95%;
+  --card: 10 0% 16%;
+  --card-foreground: 0 0% 95%;
+  --popover: 10 0% 16%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 271 76% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 225 73% 57%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 10 0% 22%;
+  --muted-foreground: 0 0% 62%;
+  --accent: 51 100% 50%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 0% 95%;
+  --border: 10 0% 22%;
+  --input: 10 0% 22%;
+  --ring: 271 76% 53%;
+  --chart-1: 271 76% 53%;
+  --chart-2: 225 73% 57%;
+  --chart-3: 51 100% 50%;
+  --chart-4: 286 60% 67%;
+  --chart-5: 200 100% 85%;
+  --sidebar-background: 10 0% 16%;
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-primary: 271 76% 53%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 51 100% 50%;
+  --sidebar-accent-foreground: 0 0% 0%;
+  --sidebar-border: 10 0% 22%;
+  --sidebar-ring: 271 76% 53%;
+  /* Dashboard card specific text colors - Default/NYN Theme Dark */
+  --dashboard-card-episode-title-color: var(--accent);
+  /* Gold */
+  --dashboard-card-segment-title-color: var(--primary);
+  /* Purple - for "Host 1 segment progress" label */
+  --dashboard-card-last-updated-text-color: var(--muted-foreground);
+  --dashboard-card-progress-text-color: var(--primary-foreground);
+}
+
+/* --- Not Your Theme --- */
+
+html.light.theme-not-your-theme, html.theme-not-your-theme:not(.dark) {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 13%;
+  --card: 240 5% 96%;
+  --card-foreground: 0 0% 13%;
+  /* Light grey card */
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 13%;
+  --primary: 39 99% 48%;
+  --primary-foreground: 0 0% 0%;
+  /* Gold/Yellow for primary (progress fill) */
+  --secondary: 0 0% 85%;
+  --secondary-foreground: 0 0% 13%;
+  /* Lighter grey for progress track */
+  --muted: 0 0% 95%;
+  --muted-foreground: 0 0% 40%;
+  --accent: 45 100% 50%;
+  --accent-foreground: 0 0% 0%;
+  /* Gold/Yellow for text accent (episode title) */
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 39 99% 48%;
+  --chart-1: 39 99% 48%;
+  --chart-2: 45 100% 50%;
+  --chart-3: 0 0% 85%;
+  --chart-4: 358 89% 43%;
+  --chart-5: 196 77% 69%;
+  --sidebar-background: 0 0% 95%;
+  --sidebar-foreground: 0 0% 13%;
+  --sidebar-primary: 39 99% 48%;
+  --sidebar-primary-foreground: 0 0% 0%;
+  --sidebar-accent: 45 100% 50%;
+  --sidebar-accent-foreground: 0 0% 0%;
+  --sidebar-border: 0 0% 90%;
+  --sidebar-ring: 39 99% 48%;
+  /* Dashboard card specific text colors - Not Your Theme Light */
+  --dashboard-card-episode-title-color: var(--accent);
+  /* Gold/Yellow */
+  --dashboard-card-segment-title-color: var(--primary);
+  /* Gold/Yellow label */
+  --dashboard-card-last-updated-text-color: var(--muted-foreground);
+  --dashboard-card-progress-text-color: var(--primary-foreground);
+  /* Black on Gold/Yellow */
+}
+
+html.dark.theme-not-your-theme {
+  --background: 0 0% 8%;
+  /* Very dark gray page background */
+  --foreground: 0 0% 95%;
+  /* Light gray text */
+  --card: 10 0% 10%;
+  /* Very dark grey/black for card background */
+  --card-foreground: 0 0% 95%;
+  /* Light text on cards */
+  --popover: 10 0% 13%;
+  /* Slightly lighter dark for popovers */
+  --popover-foreground: 0 0% 95%;
+  --primary: 39 99% 48%;
+  /* Gold/Yellow (for progress bar fill, other primary elements) */
+  --primary-foreground: 0 0% 0%;
+  /* Black text on gold/yellow */
+  --secondary: 0 0% 18%;
+  /* Dark Muted Gray (for progress bar track, other secondary elements) */
+  --secondary-foreground: 0 0% 95%;
+  /* Light text for secondary elements */
+  --muted: 10 0% 22%;
+  /* Darker muted background for some elements */
+  --muted-foreground: 0 0% 70%;
+  /* Light grey for "Last updated" text */
+  --accent: 45 100% 50%;
+  /* Gold/Yellow for Episode Title */
+  --accent-foreground: 0 0% 0%;
+  /* Black text on gold/yellow accent */
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 0% 95%;
+  --border: 10 0% 22%;
+  --input: 10 0% 22%;
+  --ring: var(--primary);
+  /* Gold/Yellow ring */
+  --chart-1: var(--primary);
+  --chart-2: var(--accent);
+  --chart-3: var(--secondary);
+  --chart-4: 358 89% 43%;
+  --chart-5: 196 77% 69%;
+  --sidebar-background: 10 0% 10%;
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+
+}

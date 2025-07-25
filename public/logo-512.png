@@ -1,0 +1,1 @@
+PLACEHOLDER: This binary file will be a copy of /public/logo.png. The build system should handle the copy. If it doesn't, you may need to manually copy logo.png to logo-512.png in the public folder.

@@ -1,0 +1,44 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Next.js build folder
+/.next/
+/out/
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+*.log
+
+# Local Environment Variables
+.env.local
+.env.*.local
+!.env.production.template
+
+# Firebase
+.firebase/
+firebase-debug.log
+database-debug.log
+firestore-debug.log
+
+# Functions specific - to be safe
+/functions/node_modules
+/functions/.next
+/functions/lib
+
+# Editor specific
+.idea
+.vscode/
+
+# Yoyo specific
+.yoyo/

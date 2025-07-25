@@ -1,0 +1,35 @@
+# Firebase
+/.firebase
+
+# Dependencies
+/node_modules
+/functions/node_modules
+
+# Next.js build outputs
+/.next/
+/out/
+
+# Other
+.DS_Store
+*.pem
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# Dumps
+/app-store-export.zip
+
+# IDE files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

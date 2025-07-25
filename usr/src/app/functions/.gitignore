@@ -1,0 +1,14 @@
+# Firebase cache and logs
+.firebase
+*.log
+
+# Dependencies
+/node_modules
+
+# Build output
+/lib
+/.next/
+
+# Misc
+.DS_Store
+Thumbs.db
